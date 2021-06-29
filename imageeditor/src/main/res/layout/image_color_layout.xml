@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.vfeng.image.view.ECColorGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cg_colors"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:checkedButton="@+id/cr_white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <com.github.vfeng.image.view.ECColorRadio
+        android:id="@+id/cr_white"
+        android:layout_width="@dimen/color_radio_height"
+        android:layout_height="@dimen/color_radio_height"
+        android:layout_margin="@dimen/color_radio_margin"
+        app:image_color="@color/color_white" />
+
+    <com.github.vfeng.image.view.ECColorRadio
+        android:layout_width="@dimen/color_radio_height"
+        android:layout_height="@dimen/color_radio_height"
+        android:layout_margin="@dimen/color_radio_margin"
+        app:image_color="@color/color_black" />
+
+    <com.github.vfeng.image.view.ECColorRadio
+        android:layout_width="@dimen/color_radio_height"
+        android:layout_height="@dimen/color_radio_height"
+        android:layout_margin="@dimen/color_radio_margin"
+        app:image_color="@color/color_red" />
+
+    <com.github.vfeng.image.view.ECColorRadio
+        android:layout_width="@dimen/color_radio_height"
+        android:layout_height="@dimen/color_radio_height"
+        android:layout_margin="@dimen/color_radio_margin"
+        app:image_color="@color/color_cyan" />
+
+    <com.github.vfeng.image.view.ECColorRadio
+        android:layout_width="@dimen/color_radio_height"
+        android:layout_height="@dimen/color_radio_height"
+        android:layout_margin="@dimen/color_radio_margin"
+        app:image_color="@color/color_yellow" />
+
+    <com.github.vfeng.image.view.ECColorRadio
+        android:layout_width="@dimen/color_radio_height"
+        android:layout_height="@dimen/color_radio_height"
+        android:layout_margin="@dimen/color_radio_margin"
+        app:image_color="@color/color_blue" />
+
+</com.github.vfeng.image.view.ECColorGroup>

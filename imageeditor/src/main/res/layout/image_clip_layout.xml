@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <ImageButton
+        android:id="@+id/ibClipCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_weight="25"
+        android:background="@null"
+        android:contentDescription="@string/image_cancel"
+        android:src="@drawable/image_ic_cancel" />
+
+    <ImageButton
+        android:id="@+id/ibClipRotate"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_weight="25"
+        android:background="@null"
+        android:contentDescription="@string/image_rotate"
+        android:src="@drawable/image_ic_rotate" />
+
+    <ImageButton
+        android:id="@+id/ibClipReset"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_weight="25"
+        android:background="@null"
+        android:contentDescription="@string/image_rotate"
+        android:src="@drawable/image_ic_reset" />
+
+    <ImageButton
+        android:id="@+id/ibClipDone"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_weight="25"
+        android:background="@null"
+        android:contentDescription="@string/image_done"
+        android:src="@drawable/image_ic_ok" />
+
+</LinearLayout>

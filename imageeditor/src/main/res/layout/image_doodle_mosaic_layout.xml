@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_bg_top"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp">
+
+        <ImageView
+            android:id="@+id/tvCancel"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="8dp"
+            android:src="@drawable/image_ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"/>
+
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/layoutColorOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <ViewSwitcher
+            android:id="@+id/doodleMosaicSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:measureAllChildren="true">
+
+            <com.github.vfeng.image.view.ECColorGroup
+                android:id="@+id/colorsGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checkedButton="@+id/cr_red"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.github.vfeng.image.view.ECColorRadio
+                    android:id="@+id/cr_red"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="12dp"
+                    android:button="@null"
+                    app:image_color="@color/color_red" />
+
+                <com.github.vfeng.image.view.ECColorRadio
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="12dp"
+                    app:image_color="@color/color_black" />
+
+                <com.github.vfeng.image.view.ECColorRadio
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="16dp"
+
+                    app:image_color="@color/color_white" />
+
+                <com.github.vfeng.image.view.ECColorRadio
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="12dp"
+                    app:image_color="@color/color_cyan" />
+
+                <com.github.vfeng.image.view.ECColorRadio
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="12dp"
+                    app:image_color="@color/color_yellow" />
+
+                <com.github.vfeng.image.view.ECColorRadio
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="12dp"
+                    app:image_color="@color/color_blue" />
+
+            </com.github.vfeng.image.view.ECColorGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="12sp" />
+
+        </ViewSwitcher>
+
+        <ImageButton
+            android:id="@+id/btnCancelPath"
+            android:layout_width="@dimen/image_icon_size"
+            android:layout_height="@dimen/image_icon_size"
+            android:background="@null"
+            android:contentDescription="@string/image_undo"
+            android:src="@drawable/image_btn_undo" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_bg_bottom"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp">
+
+        <RadioGroup
+            android:id="@+id/modesGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+
+            <RadioButton
+                android:id="@+id/rbDoodle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/image_btn_doodle"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:textColor="#FFF" />
+
+            <Space
+                android:layout_width="36dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/ibText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/image_text"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_btn_text"
+                android:textColor="#FFF" />
+
+            <Space
+                android:layout_width="36dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rbMosaic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/image_btn_mosaic"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:textColor="#FFF" />
+
+            <Space
+                android:layout_width="36dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/ibClip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/image_clip"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_btn_clip"
+                android:textColor="#FFF" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:background="@drawable/image_btn_complete"
+            android:text="@string/image_done"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+</LinearLayout>
